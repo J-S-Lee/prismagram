@@ -6,7 +6,10 @@ import { GraphQLServer } from "graphql-yoga";
 import logger from "morgan";
 import schema from "./schema";
 
-console.log(process.env.PORT);
+import {sendSecretMail} from './utils';
+
+sendSecretMail('jasoc1004@gmail.com', '12345'); // for test
+
 const PORT = process.env.PORT || 4000;
 
 
