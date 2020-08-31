@@ -1,13 +1,8 @@
-export const USER_FRAGMENT = `
-    fragment UserParts on User {
-        id
+export const COMMENT_FRAGMENT = `
+fragment CommentParts on Comment {
+    id
+    text
+    user {
         username
-        email
-        firstName
-        lastName
-        posts {
-            id
-            caption
-        }
     }
-`;
+}`;
