@@ -30,7 +30,9 @@ export default {
             const { id } = parent;
             return prisma.$exists.like({
                 AND: [{
-                    id: user.id
+                    user: {
+                        id: user.id
+                    }
                 }, {
                     post: {
                         id
