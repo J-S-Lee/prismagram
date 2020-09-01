@@ -4,11 +4,14 @@ type User {
   email: String!
   firstName: String
   lastName: String
+  fullName: String
+  amIFollowing: Boolean!
   bio: String
   following: [User!]!
   followers: [User!]!
   posts: [Post!]!
   likes: [Like!]!
+  isLiked: Boolean!
   comments: [Comment!]!
   rooms: [Room!]!
   loginSecret: String

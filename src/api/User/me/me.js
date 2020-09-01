@@ -12,7 +12,7 @@ export default {
                 user: userProfile, posts
             }
         }
-
+        
         /**
          * $fragment를 대채하는 다른 방법 fragments.js 대신 아래와 같이 수정
          * 
@@ -36,7 +36,13 @@ export default {
          *      }
          * }
          */
-
-
+        
+        
+    },
+    
+    User: {
+        fullName: parent => {
+            return `${parent.firstName} ${parent.lastName}`;
+        }
     }
 }
