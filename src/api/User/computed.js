@@ -23,23 +23,5 @@ export default {
             const { id: parentId } = parent;
             return parentId === user.id;
         }
-    },
-    Post: {
-        isLiked: (parent, _, { request }) => {
-            const { user } = request;
-            const { id } = parent;
-            return prisma.$exists.like({
-                AND: [{
-                    user: {
-                        id: user.id
-                    }
-                }, {
-                    post: {
-                        id
-                    }
-                }]
-            })
-        }
-    }
-    
+    }    
 }
