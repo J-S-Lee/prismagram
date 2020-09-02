@@ -32,3 +32,12 @@ fragment postParts on Post {
     }
 }
 `;
+
+export const ROOM_FRAGMENT = `
+fragment roomParts on Room {
+    id
+    participants {
+        id
+    }
+}
+`;
